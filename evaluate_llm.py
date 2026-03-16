@@ -19,4 +19,5 @@ for item in data:
     print("PROMPT:", prompt)
     print("MODEL:", answer)
     print("EXPECTED:", item["expected"])
-    print("-" * 40)print("Japanese LLM evaluation toolkit")
+    print("-" * 40)
+    print("Japanese LLM evaluation toolkit")
