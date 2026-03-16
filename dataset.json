@@ -1,14 +1,27 @@
 [
   {
     "prompt": "1回は何と読みますか？",
-    "expected": "いっかい"
+    "expected": "いっかい",
+	"task_type": "reading"
   },
   {
     "prompt": "日本語で自然な表現に直してください: 私は昨日映画を見ましたです。",
-    "expected": "私は昨日映画を見ました。"
+    "expected": "私は昨日映画を見ました。",
+	"task_type": "grammaticality"
   },
   {
     "prompt": "8.5万円/月 を自然な日本語で読んでください。",
-    "expected": "毎月八点五万円"
+    "expected": "毎月八点五万円",
+	"task_type": "normalization"
+  },
+  {
+    "prompt": "学校で行きました。自然な日本語で読んでください。",
+    "expected": "学校に行きました。",
+	"task_type": "particle"
+  },
+  {
+    "prompt": "試験を取りました。自然な日本語にしてください。",
+    "expected": "試験を受けました。",
+	"task_type": "naturalness"
   }
 ]

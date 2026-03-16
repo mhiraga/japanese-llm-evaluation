@@ -1,0 +1,114 @@
+{
+  "summary": {
+    "num_examples": 5,
+    "exact_match_rate": 0.2,
+    "normalized_exact_match_rate": 0.2,
+    "avg_char_similarity": 0.441,
+    "avg_normalized_char_similarity": 0.444,
+    "contains_expected_rate": 0.8,
+    "avg_aggregate_score": 0.381,
+    "error_tag_counts": {
+      "particle_error": 4,
+      "reading_error": 1,
+      "unnatural_phrasing": 1
+    },
+    "avg_naturalness_score": 4.4
+  },
+  "results": [
+    {
+      "id": 1,
+      "task_type": "reading",
+      "prompt": "1回は何と読みますか？",
+      "model_output": "「1回」は「いっかい」と読みます。",
+      "expected": "いっかい",
+      "exact_match": 0,
+      "normalized_exact_match": 0,
+      "char_similarity": 0.381,
+      "normalized_char_similarity": 0.4,
+      "contains_expected": 1,
+      "length_difference": 13,
+      "aggregate_score": 0.3,
+      "error_tags": [
+        "particle_error",
+        "reading_error"
+      ],
+      "naturalness_score": 5,
+      "naturalness_reason": "The output is fully natural and correctly answers the question in fluent Japanese."
+    },
+    {
+      "id": 2,
+      "task_type": "grammaticality",
+      "prompt": "日本語で自然な表現に直してください: 私は昨日映画を見ましたです。",
+      "model_output": "私は昨日映画を見ました。",
+      "expected": "私は昨日映画を見ました。",
+      "exact_match": 1,
+      "normalized_exact_match": 1,
+      "char_similarity": 1.0,
+      "normalized_char_similarity": 1.0,
+      "contains_expected": 1,
+      "length_difference": 0,
+      "aggregate_score": 1.0,
+      "error_tags": [],
+      "naturalness_score": 5,
+      "naturalness_reason": "The output is a fully natural and fluent expression in Japanese."
+    },
+    {
+      "id": 3,
+      "task_type": "normalization",
+      "prompt": "8.5万円/月 を自然な日本語で読んでください。",
+      "model_output": "「8万5千円月額」と読みます。",
+      "expected": "毎月八点五万円",
+      "exact_match": 0,
+      "normalized_exact_match": 0,
+      "char_similarity": 0.1818,
+      "normalized_char_similarity": 0.1905,
+      "contains_expected": 0,
+      "length_difference": 8,
+      "aggregate_score": 0.0476,
+      "error_tags": [
+        "particle_error"
+      ],
+      "naturalness_score": 3,
+      "naturalness_reason": "The output is understandable but the phrasing '月額' is somewhat awkward in this context; a more natural way would be '月に' or simply '月' after the amount."
+    },
+    {
+      "id": 4,
+      "task_type": "particle",
+      "prompt": "学校で行きました。自然な日本語で読んでください。",
+      "model_output": "「学校で行きました」という文は少し不自然に感じます。もう少し自然な表現にするためには、文脈によって異なりますが、例えば以下のように言い換えることができます。\n\n- 「学校に行きました。」\n- 「学校で活動しました。」\n- 「学校に行ってきました。」\n\n具体的な状況や内容に応じて、さらに詳しく表現することもできます。何か特定の文脈があれば教えてください。",
+      "expected": "学校に行きました。",
+      "exact_match": 0,
+      "normalized_exact_match": 0,
+      "char_similarity": 0.0968,
+      "normalized_char_similarity": 0.0964,
+      "contains_expected": 1,
+      "length_difference": 168,
+      "aggregate_score": 0.2241,
+      "error_tags": [
+        "particle_error"
+      ],
+      "naturalness_score": 4,
+      "naturalness_reason": "The output provides valid alternatives and explanations, but the initial assessment of the phrase '学校で行きました' as unnatural is somewhat misleading; it can be contextually acceptable."
+    },
+    {
+      "id": 5,
+      "task_type": "naturalness",
+      "prompt": "試験を取りました。自然な日本語にしてください。",
+      "model_output": "「試験を受けました。」が自然な日本語になります。",
+      "expected": "試験を受けました。",
+      "exact_match": 0,
+      "normalized_exact_match": 0,
+      "char_similarity": 0.5455,
+      "normalized_char_similarity": 0.5333,
+      "contains_expected": 1,
+      "length_difference": 15,
+      "aggregate_score": 0.3333,
+      "error_tags": [
+        "particle_error",
+        "unnatural_phrasing"
+      ],
+      "naturalness_score": 5,
+      "naturalness_reason": "The output '試験を受けました' is a fully natural and fluent expression in Japanese, commonly used to indicate that someone has taken an exam."
+    }
+  ]
+}
